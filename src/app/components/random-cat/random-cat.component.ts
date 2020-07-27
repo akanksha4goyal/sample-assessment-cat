@@ -10,18 +10,18 @@ import { Cat } from 'src/app/models/cat.model';
 })
 
 export class RandomCatComponent implements OnInit {
-randomCat: Cat;
-error: string;
+  randomCat: Cat;
+  error: string;
   constructor(private catImageService: CatImageService) {
-    //this.catImageService.getRandomCat()
-   }
 
-  ngOnInit(): void {
-    this.randomCatImage(); 
   }
 
-  randomCatImage(){
-    this.catImageService.getRandomCat().subscribe(cat=>{
+  ngOnInit(): void {
+    this.randomCatImage();
+  }
+
+  randomCatImage() {
+    this.catImageService.getRandomCat().subscribe(cat => {
       this.randomCat = <Cat>cat;
     }
     )

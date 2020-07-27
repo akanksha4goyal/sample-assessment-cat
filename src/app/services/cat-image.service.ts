@@ -37,8 +37,8 @@ export class CatImageService {
     let url_cat: string = `${this.randomCatUrl}?category_ids=${id}&limit=${limit}`;
     return this.http.get<Cat[]>(url_cat, httpOptions).pipe(catchError(this.handleError))
   }
-  
-  handleError(error){
+
+  handleError(error) {
     return throwError(error.message || "Server Error")
   }
 }

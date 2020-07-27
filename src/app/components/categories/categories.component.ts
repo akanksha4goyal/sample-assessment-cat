@@ -16,15 +16,12 @@ export class CategoriesComponent implements OnInit {
   display: string = "false";
   catsByCategory: Cat[] = [];
   index = 5;
-  error:string;
+  error: string;
 
   constructor(private catImageService: CatImageService) { }
 
   ngOnInit(): void {
     this.categoriesList();
-    // setTimeout(() => {
-    //   console.log(this.categories);
-    // }, 5000);;
     this.imageQuantity = Array(20).fill(5).map((x, i) => i + 1);
   }
 
@@ -40,7 +37,6 @@ export class CategoriesComponent implements OnInit {
 
   selectNumberChangeHandler(event: any) {
     this.limit = event.target.value;
-    // console.log(this.limit);
   }
   catImage() {
     this.catImageService.getCategoryCats(this.index, this.limit).subscribe(cats => {
