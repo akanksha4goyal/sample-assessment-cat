@@ -1,0 +1,39 @@
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-lg-3"></div>
+    <!-- <div class="col-lg-2">
+        <h4 style="text-align: right;">Select a Category</h4>
+    </div> -->
+    <div class="col-lg-3">
+        <p style="text-align: center;">Select a Category <select autocomplete="additional-name"
+                (change)="selectCategoryChangeHandler(categories[$event.target.selectedIndex])"
+                style="text-align: left;">
+
+                <option *ngFor="let category of categories" value={{categories.id}} style="text-transform:capitalize;">
+                    {{category.name}} </option>
+            </select></p>
+    </div>
+    <!-- <div class="col-lg-2">
+        <h4 style="text-align: right;">Select Quantity</h4>
+    </div> -->
+    <div class="col-lg-3">
+        <p style="text-align: center;">Select Quantity <select autocomplete="additional-name" (change)="selectNumberChangeHandler($event)">
+                <!-- <option>Select No of Images</option> -->
+                <option *ngFor="let number of imageQuantity" value="{{number}} " style="text-align: left;">{{number}}
+                </option>
+            </select></p>
+    </div>
+    <div class="col-lg-2">
+        <p style="text-align: center;"><button class="btn btn-primary" (click)="catImage()">Search</button></p>
+    </div>
+</div>
+<br /><br />
+
+<div *ngIf="display">
+
+    <img *ngFor="let cat of catsByCategory" src="{{cat.url}}" width="435" height="400">
+
+</div>

@@ -1,0 +1,46 @@
+<br /><br />
+<!-- <div class="row">
+    <div class="col-lg-2 offset-md-1 ">
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <button type="button" class="btn btn-primary btn-block" (click)="randomCatImage()">Change Image</button>
+    </div>
+    <div *ngIf="randomCat" class="col-lg-4 offset-md-1 ">
+        <div class="card">
+            <img src={{randomCat.url}} width="435" height="400">
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 offset-md-1">
+            <div class="card" *ngIf="randomCat">
+                <div>
+                    <img class="card-img-top" src={{randomCat.url}} width="435" height="400">
+                   
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" (click)="randomCatImage()">Change
+                Image</button>
+        </div>
+        <div class="col-lg-4 offset-md-1">
+            <br /><br /><br /><br />
+            <h1 style="color: blue;text-align: center;">Random Cat Image</h1>
+            <br /><br /><br /><br />
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-6"> -->
+                    <h4 style="text-align: center;">Scroll Down to explore more images</h4>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                <!-- <div class="col-lg-6 offset-md-3"> -->
+                    <p style="text-align:center;"> <img style="text-align:center"
+                        src="https://static.wixstatic.com/media/821bc9_38ac5df64cc249748a94d8cb15f13a22~mv2.gif"
+                        width="100" height="100"></p>
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
+
+
+        </div>
+    </div>
+</div>
